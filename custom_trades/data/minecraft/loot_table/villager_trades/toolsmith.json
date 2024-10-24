@@ -1,0 +1,38 @@
+{
+  "type": "minecraft:villager",
+  "pools": [
+    {
+      "name": "toolsmith_master_custom_trade",
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "item",
+          "name": "minecraft:diamond",
+          "functions": [
+            {
+              "function": "set_count",
+              "count": 1
+            }
+          ]
+        }
+      ],
+      "conditions": [
+        {
+          "condition": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "type_specific": {
+              "type": "villager",
+              "level": 4,
+              "profession": "minecraft:toolsmith"
+            }
+          }
+        }
+      ],
+      "cost": {
+        "item": "minecraft:emerald",
+        "count": 1
+      }
+    }
+  ]
+}
